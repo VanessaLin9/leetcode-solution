@@ -84,7 +84,6 @@ class LinkedList {
 
   // linked list function: [insert]
   insertAt(index, value){
-    
     if(this.length<index ||index < 0){
       return null;
     } else if (index === 0) {
@@ -105,6 +104,40 @@ class LinkedList {
       this.length++;
       return;
     }
+  }
+  // linked list function: [remove]
+  removeAt(index){
+    if(this.length< index || index<0){
+      return null;
+    } else if (index === 0){
+      let result = this.shift();
+      return result; 
+    } else if (index === this.length){
+      let result = this.pop();
+      return result;
+    } else {
+      let currentNode = this.head;
+      for(let i=1; i<index; i++){
+        currentNode = currentNode.next;
+      }
+      let nextNode = currentNode.next.next;
+      let result = currentNode.next;
+      currentNode.next = nextNode;
+      this.length--;
+      return result;
+    }
+  }
+
+  // linked list function: [get]
+  get(index){
+    if(index>=this.length || index<0){
+      return null;
+    }
+    let currentNode = this.head
+    for(let i=0; i<index; i++){
+      currentNode = currentNode.next;
+    } 
+    return currentNode.value;
   }
 
   // linked list function: [pint]
@@ -147,7 +180,13 @@ myLinkedList.push("maiomaio");
 // myLinkedList.unshift('tantan')
 
 // inset 測試
-myLinkedList.insertAt(2, 'reman')
+myLinkedList.insertAt(2, 'ramen')
+
+//remove 測試
+myLinkedList.removeAt(3)
+
+//get 測試
+console.log('get', myLinkedList.get(2))
 
 // pint linked list
 myLinkedList.pintAll()
