@@ -8,6 +8,15 @@ class HashTable {
     }
   }
 
+  // parse string to integer
+  parse(str){
+    let result = 0;
+    for(let i=0; i<str.length; i++){
+      result += str.charCodeAt(i)
+    }
+    return result % this.size;
+  }
+
   // division method
   hash1(key){
     return key % this.size;
@@ -15,8 +24,14 @@ class HashTable {
 
   // modification method
   hash2(key){
+    let parseKey = 0;
+    if(typeof key !== 'number'){
+      parseKey = this.parse(key);
+    } else {
+      parseKey = key;
+    }
     let A = (Math.sqrt(5) -1)/2;
-    return Math.floor(this.size * ((key * A) % 1));
+    return Math.floor(this.size * ((parseKey * A) % 1));
   }
 
   // set method
@@ -42,11 +57,22 @@ class HashTable {
 
 let myHashTable = new HashTable(6);
 
-myHashTable.set(11424, "tank")
-myHashTable.set(6254, "vv")
-myHashTable.set(4147, "bawbaw")
-myHashTable.set(554, "tanktank")
+// 1. key 為 number的時候
+
+// myHashTable.set(11424, "tank")
+// myHashTable.set(6254, "vv")
+// myHashTable.set(4147, "bawbaw")
+// myHashTable.set(554, "tanktank")
+
+// myHashTable.printAll()
+
+// console.log(myHashTable.get(554))
+
+// 2. key 不為 number的時候 => 舉 CSS 當例子
+
+myHashTable.set('white', '#FFFFFF')
+myHashTable.set('red', '#FF0000')
+myHashTable.set('magenta', '#FF00FF')
 
 myHashTable.printAll()
-
-console.log(myHashTable.get(554))
+console.log(myHashTable.get('red').value)
