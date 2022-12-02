@@ -77,4 +77,22 @@ function DFT(starter){
   return result;
 }
 
-console.log(DFT(H))
+function BFT(starter){
+  let queue = [];
+  queue.push(starter)
+  starter.visited = true;
+  while(queue.length !== 0){
+    let firstNode = queue.shift()
+    result.push(firstNode.value)
+    firstNode.visited = true;
+    firstNode.neighbors.forEach((neighbor) => {
+      if(!neighbor.visited){
+        queue.push(neighbor);
+        neighbor.visited = true;
+      }
+    })
+  }
+  return result;
+}
+
+console.log(BFT(A))
