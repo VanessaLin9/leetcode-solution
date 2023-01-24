@@ -10,7 +10,7 @@
  * @return {number}
  */
 
-
+// binary search
 var searchInsert = function(nums, target) {
   let R = nums.length -1;
   let L = 0;
@@ -28,7 +28,7 @@ var searchInsert = function(nums, target) {
   }
   return L  // 沒找到的時候 L會比R多1(出迴圈設定) 插入位idx應該是多一位所以只能寫L，不會是R
 };
-// T: O(n log n) (指定)
+// T: O(log n) (指定)
 // S: O()
 
 console.log(searchInsert([1,3,5,6], 2))
