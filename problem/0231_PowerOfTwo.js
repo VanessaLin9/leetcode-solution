@@ -28,4 +28,10 @@ var isPowerOfTwo = function(n){
   return (Math.log2(n) % 1) === 0
 }
 
+// Bitwise
+var isPowerOfTwo = function(n) {
+    if(n <= 0) return false;
+    return (n & n-1) === 0
+};
+
 console.log(isPowerOfTwo(16))
