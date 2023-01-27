@@ -11,6 +11,7 @@
  * @return {number}
  */
 
+// recursion
 var fib = function(n) {
     if (n ===0) {
       return 0
@@ -19,6 +20,17 @@ var fib = function(n) {
     } else {
       return fib(n-1) + fib(n-2)
     }
+};
+
+// DP
+var fib = function(n) {
+    if(n < 2) return n;
+    let a = 0;
+    let b = 1;
+    for(let i=1; i<n; i++){
+        [a, b] = [b, a+b]
+    }
+    return b
 };
 
 console.log(fib(4)) //3
