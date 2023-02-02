@@ -62,19 +62,32 @@
 
 // ________________________________________________________
 // [hash table] -AC 131ms
-var missingNumber = function(nums) {
-  const hash ={}
-  for(let i=0; i<nums.length;i++){
-    hash[nums[i]] = 1
-  }
-  if(hash[0] === undefined) return 0
-  if(hash[nums.length] === undefined) return nums.length
-  for(let j=1; j<nums.length; j++){
-    if(hash[j] === undefined) return j
-  }
-}
+// var missingNumber = function(nums) {
+//   const hash ={}
+//   for(let i=0; i<nums.length;i++){
+//     hash[nums[i]] = 1
+//   }
+//   if(hash[0] === undefined) return 0
+//   if(hash[nums.length] === undefined) return nums.length
+//   for(let j=1; j<nums.length; j++){
+//     if(hash[j] === undefined) return j
+//   }
+// }
 // T: O(n)
 // S: O(n)
+// 
+// _____________________________________________________________
+// 
+//bitwise
+var missingNumber = function(nums) {
+    let result = 0;
+    for(let i=0; i<nums.length; i++){
+        result = result ^ i ^ nums[i]
+    }
+    return result ^ nums.length
+};
+// T: O(n)
+// S: O(1)
 
 console.log(missingNumber([9,6,4,2,3,5,7,0,1])) //8
 console.log(missingNumber([0,1])) //2
