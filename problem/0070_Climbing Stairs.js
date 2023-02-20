@@ -24,16 +24,25 @@
 
 // 可以算但是數字大的時候(例如43)會超時
 
-// with out recurrsion
+// with out recursion
+// var climbStairs = function(n) {
+//   if( n === 0) return 0;
+//   if( n === 1) return 1;
+//   if( n === 2) return 2;
+//   let arr = [1, 2]
+//   for( let i=2; i<n; i++){
+//     arr[i] = arr[i-1] + arr[i-2]
+//   }
+//   return arr[n-1]
+// }
+
+// 一樣但稍微縮點了一點
 var climbStairs = function(n) {
-  if( n === 0) return 0;
-  if( n === 1) return 1;
-  if( n === 2) return 2;
-  let arr = [1, 2]
-  for( let i=2; i<n; i++){
-    arr[i] = arr[i-1] + arr[i-2]
-  }
-  return arr[n-1]
-}
+   const arr = [0, 1, 2] 
+   for(let i=3; i<=n; i++){
+       arr[i] = arr[i-1] + arr[i-2]
+   }
+   return arr[n]
+};
 
 console.log(climbStairs(44))
