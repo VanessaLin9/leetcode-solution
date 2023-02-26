@@ -10,7 +10,7 @@
  * @return {string}
  */
 
-
+// regExp
 var reverseVowels = function(s) {
   const vowels = /[aeiou]/ig
   const result = s.match(vowels)
@@ -27,5 +27,29 @@ var reverseVowels = function(s) {
 };
 // T: O(n)
 // S: O(n)
+
+// tow pointers
+var reverseVowels = function(s) {
+    const set = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'])
+    const arr = s.split('')
+    let L = 0;
+    let R = arr.length-1;
+    while(R>L){
+        if(!set.has(arr[L])) {
+            L ++
+        }
+        if(!set.has(arr[R])){
+            R--
+        }
+        if(set.has(arr[L]) && set.has(arr[R])){
+            let temp = arr[L]
+            arr[L] = arr[R]
+            arr[R] = temp;
+            L ++;
+            R --;
+        }
+    }
+    return arr.join('')
+};
 
 console.log(reverseVowels("leetcode"))
