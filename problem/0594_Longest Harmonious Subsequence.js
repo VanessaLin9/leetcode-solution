@@ -7,9 +7,8 @@
  * @param {number[]} nums
  * @return {number}
  */
+// hash map
 var findLHS = function(nums) {
-    nums.sort((a, b)=> b-a)
-    let max = nums[0]
     const hash = {}
     for(let i=0; i<nums.length; i++){
         if(hash[nums[i]] === undefined){
@@ -17,7 +16,6 @@ var findLHS = function(nums) {
         }
         hash[nums[i]] ++
     }
-    // console.log(hash)
     let result = 0;
     for(let j in hash){
       if(hash[j-1] !== undefined){
