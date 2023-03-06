@@ -10,7 +10,7 @@ var minDeletionSize = function(strs) {
   let result = 0;
   for(let i=0; i<strs[0].length; i++){
     for(let j=1; j<strs.length; j++){
-      if(strs[j-1][i].charAt()>strs[j][i].charAt()) {
+      if(strs[j-1][i].charCodeAt()>strs[j][i].charCodeAt()) {
         result += 1;
         break
       }
