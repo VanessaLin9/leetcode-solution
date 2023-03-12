@@ -20,11 +20,11 @@ var  gcdOfStrings = function(str1, str2) {
   } else if (str1 === str2){
     return str1
   } else if (str1.length > str2.length){
-     return gcdOfStrings(str1.substring(0, str2.length), str2)
-  } else if (str2.length > str1.length){
-    return gcdOfStrings(str1, str2.substring(0, str1.length))
-  }
+     return gcdOfStrings(str1.substring(str2.length), str2)
+  } else {
+    return gcdOfStrings(str1, str2.substring(str1.length))
+  } 
 }
 
-console.log(gcdOfStrings("ABCABC", "ABC"))
-console.log(gcdOfStrings("ABABAB", "AB"))
+console.log(gcdOfStrings("ABCABC", "ABC")) //ABC
+console.log(gcdOfStrings("ABABAB", "ABAB")) //AB
