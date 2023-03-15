@@ -76,6 +76,30 @@
 // T: O(n)
 // S: O(n)
 // 
+// [hash set] -AC 65ms
+// var missingNumber = function(nums) {
+//     const hash = new Set(nums)
+//     for(let i=0; i<=nums.length; i++){
+//         if(!hash.has(i)) return i
+//     }
+// };
+// 
+// TC: O(n)
+// MC: O(n)
+// 
+// [hash map] -AC 81ms
+// var missingNumber = function(nums) {
+//     const hash = new Map()
+//     for(let i=0; i<nums.length; i++){
+//         hash.set(nums[i], true)
+//     }
+//     for(let j=0; j<=nums.length; j++){
+//         if(!hash.delete(j)) return j
+//         hash.delete(j)
+//     }
+// };
+// T: O(n)
+// S: O(n)
 // _____________________________________________________________
 // 
 //bitwise
