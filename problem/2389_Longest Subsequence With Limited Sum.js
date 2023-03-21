@@ -31,5 +31,41 @@ var answerQueries = function(nums, queries) {
   }
  return result
 };
+// TC: n^2
+// MC: n
 
-console.log(answerQueries([624082], [972985,564269,607119,693641,787608,46517,500857,140097]))
+// binary search 
+// 優化一點TC，直接用原queries接結果回吐省MC -AC 78 ms
+var answerQueries = function(nums, queries) {
+  nums.sort((a, b) => a - b)
+  for(let i=1; i<nums.length; i++){
+      nums[i] = nums[i-1] + nums[i]
+  }
+  for(let j =0; j<queries.length; j++){
+      queries[j] = binary(queries[j])
+  }
+  
+  function binary(n){
+    let r = nums.length;
+    let l = 0
+    let mid;
+    while(r>=l){
+      mid = Math.floor((r+l)/2)
+      if(nums[mid] === n){
+          return mid + 1
+      } else if(nums[mid] < n){
+          l = mid + 1
+      } else {
+          r = mid -1
+      }
+    }
+    return l
+  }
+  return queries
+};
+
+// TC: n log n
+// MC: 1
+
+console.log(answerQueries([624082], [972985,564269,607119,693641,787608,46517,500857,140097])) //[1,0,0,1,1,0,0,0]
+console.log(answerQueries([736411,184882,914641,37925,214915], [331244,273144,118983,118252,305688,718089,665450])) //[2,2,1,1,2,3,3]
