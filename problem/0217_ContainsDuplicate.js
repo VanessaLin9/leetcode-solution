@@ -25,13 +25,13 @@
 
 
 // sort
-var containsDuplicate = function(nums) {
-  nums.sort()
-  for(let i=0; i<nums.length; i++){
-    if(nums[i] === nums[i+1]) return true
-  }
-  return false
-}
+// var containsDuplicate = function(nums) {
+//   nums.sort()
+//   for(let i=0; i<nums.length; i++){
+//     if(nums[i] === nums[i+1]) return true
+//   }
+//   return false
+// }
 // T: O(n log n)
 // S: O(1)
 
@@ -41,6 +41,23 @@ var containsDuplicate = function(nums) {
     return set.size !== nums.length
 };
 // T: O(1)
+// S: O(n)
+
+
+// includes()
+// var containsDuplicate = function(nums) {
+//     const result = [];
+//     for(let i=0; i<nums.length; i++){
+//       if(result.includes(nums[i])){
+//         return false
+//       } else {
+//         result.push(nums[i])
+//       }
+//     }
+//     return true
+// };
+
+// T: O(n)
 // S: O(n)
 
 console.log(containsDuplicate([1,2,3,4]))
