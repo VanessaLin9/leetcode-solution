@@ -25,7 +25,44 @@
 // T: O(n)
 // S: O(n)
 
+// random
+var majorityElement = function(nums) {
+  while(true){
+    let r = Math.floor(Math.random()*nums.length)
+    let majority = nums[r]
+    let count = 0;
+    for(let i=0; i<nums.length; i++){
+      if(nums[i] === majority){
+        count ++
+        if(count > Math.floor(nums.length/2)) return majority
+      }
+    }
+  }
+};
+// T: O(n)
+// S: O(1)
 
+// ---------------vote base---------------------------
+var majorityElement = function(nums) {
+    let major = nums[0]
+    let count = 0
+    for(let i=0; i<nums.length; i++){
+        if(nums[i] === major) {
+            count ++
+        } else {
+            count --
+            if(count === 0){
+                major = nums[i]
+                count = 1
+            }
+        }
+    }
+    return major
+};
+// T: O(n)
+// S: O(1)
+
+// --------------sort base----------------------------
 // sort
 var majorityElement = function(nums){
   nums.sort((a, b) => a-b)
