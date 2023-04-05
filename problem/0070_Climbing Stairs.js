@@ -24,7 +24,7 @@
 
 // 可以算但是數字大的時候(例如43)會超時
 
-// with out recursion
+// DP
 // var climbStairs = function(n) {
 //   if( n === 0) return 0;
 //   if( n === 1) return 1;
@@ -36,13 +36,23 @@
 //   return arr[n-1]
 // }
 
-// 一樣但稍微縮點了一點
+// 一樣DP但稍微縮點了一點
 var climbStairs = function(n) {
    const arr = [0, 1, 2] 
    for(let i=3; i<=n; i++){
        arr[i] = arr[i-1] + arr[i-2]
    }
    return arr[n]
+};
+// 一樣DP但改成ES6語法
+var climbStairs = function(n) {
+    if(n<=1) return n;
+    let a = 0;
+    let b = 1;
+    for(let i=1; i<n; i++){
+        [a, b] = [b, a+b]
+    }
+    return a+b
 };
 
 console.log(climbStairs(44))
