@@ -28,7 +28,9 @@ var reverseVowels = function(s) {
 // T: O(n)
 // S: O(n)
 
+// ----------------------------------------------------------
 // tow pointers
+// set
 var reverseVowels = function(s) {
     const set = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'])
     const arr = s.split('')
@@ -47,6 +49,25 @@ var reverseVowels = function(s) {
             arr[R] = temp;
             L ++;
             R --;
+        }
+    }
+    return arr.join('')
+};
+// RegExp
+var reverseVowels = function(s) {
+    const vowels = /[aeiou]/i
+    const arr = s.split('')
+    let r = arr.length-1;
+    let l = 0
+    while(r>l){
+        if(vowels.test(arr[r]) && vowels.test(arr[l])){
+            [arr[r], arr[l]] = [arr[l], arr[r]]
+            r--;
+            l++
+        } else if(!vowels.test(arr[r])){
+            r--;
+        } else if(!vowels.test(arr[l])){
+            l++;
         }
     }
     return arr.join('')
