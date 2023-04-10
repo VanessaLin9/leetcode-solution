@@ -37,7 +37,6 @@ var distance = function(nums) {
     ct.set(nums[i], ct.get(nums[i]) + 1 || 1);
     sum.set(nums[i], sum.get(nums[i]) + i || i);
   }
- 
   ct.clear();
   sum.clear();
   

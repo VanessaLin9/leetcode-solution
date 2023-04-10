@@ -36,5 +36,32 @@ var findShortestSubArray = function(nums) {
     return result
 };
 
+// 用三個table接
+var findShortestSubArray = function(nums) {
+    const counter = {}
+    const firstIdx = {}
+    const lestIdx = {}
+    let max = 0;
+    for(let i=0; i<nums.length; i++){
+        let k = nums[i]
+        counter[k] = (counter[k] || 0) +1;
+        max = Math.max(max, counter[k])
+        if(firstIdx[k] === undefined){
+            firstIdx[k] = i
+        }
+        lestIdx[k] = i
+    }
+    let result =Infinity;
+    for(let j in counter){
+        if(counter[j] === max){
+            result = Math.min(result, lestIdx[j] - firstIdx[j] + 1)
+        }
+    }
+    return result
+};
+
+// TC: O(n)
+// MC: O(n)
+
 console.log(findShortestSubArray([1,5,1,1,6,4])) // 4
 console.log(findShortestSubArray([1,1,2,2,2,1])) // 3
