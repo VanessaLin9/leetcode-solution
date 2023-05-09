@@ -16,6 +16,7 @@
  * @return {number[]}
  */
 
+// [hash map]---------------
 var twoSum = function(nums, target) {
     const hash ={}
 
@@ -26,5 +27,35 @@ var twoSum = function(nums, target) {
      }
     
 }
+// TC: O(n)
+// MC: O(n)
+
+// [two pointer]-----------
+var twoSum = function(nums, target) {
+    const arr = [...nums]
+    nums.sort((a, b) => a-b)
+    let l =0;
+    let r = nums.length-1;
+    while(r>l){
+        let sum = nums[r] + nums[l]
+        if(sum === target){
+            break;
+        } else if(sum > target){
+            r--
+        } else {
+            l++
+        }
+    }
+    const ans = []
+    for(let j=0; j<arr.length; j++){
+        if(arr[j] === nums[r] || arr[j] === nums[l]){
+            ans.push(j)
+        } 
+    }
+    return ans
+};
+
+// TC: O(nlogn)
+// MC: O(n)
 
 console.log(twoSum([2,7,11,15],9))
