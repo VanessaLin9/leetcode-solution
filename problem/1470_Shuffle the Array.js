@@ -15,4 +15,15 @@ var shuffle = function(nums, n) {
     return result
 };
 
+// map()
+var shuffle = function(nums, n) {
+    return nums.map((c, i) => {
+        if(i%2 === 0){
+            return nums[i/2]
+        } else {
+            return nums[n+(i-1)/2]
+        }
+    })
+};
+
 console.log(shuffle([2,5,1,3,4,7])) //[2,3,5,4,1,7]
