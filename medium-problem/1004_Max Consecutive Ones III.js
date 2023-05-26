@@ -3,6 +3,10 @@
  * @param {number} k
  * @return {number}
  */
+
+// 關聯題(簡單到難): 1004 → 2024 → 424
+
+// sliding window
 var longestOnes = function(nums, k) {
     let l = 0;
     let r = 0;
