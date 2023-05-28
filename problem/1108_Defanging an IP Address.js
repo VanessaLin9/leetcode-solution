@@ -9,3 +9,8 @@
 var defangIPaddr = function(address) {
     return address.replace(/\./g,"[.]" )
 };
+
+// split
+var defangIPaddr = function(address) {
+    return address.split('.').join('[.]')
+};
