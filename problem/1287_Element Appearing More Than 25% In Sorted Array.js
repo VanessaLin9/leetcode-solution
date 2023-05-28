@@ -4,6 +4,20 @@
  * @param {number[]} arr
  * @return {number}
  */
+
+// hash table
+var findSpecialInteger = function(arr) {
+  const hash = {}
+  let count = Math.floor(arr.length/4)
+  for(let i=0; i<arr.length; i++){
+      hash[arr[i]] = (hash[arr[i]] || 0) + 1
+    if(hash[arr[i]] > count) return arr[i]
+  }  
+  return -1
+};
+
+
+
 // sliding window
 var findSpecialInteger = function(arr) {
   const wd = Math.floor(arr.length/4)
