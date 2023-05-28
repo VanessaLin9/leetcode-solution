@@ -24,3 +24,22 @@ var maxConsecutiveAnswers = function(arr, k) {
 
     return maxcount
 };
+
+// 自己用1004去寫的解法，TF分兩次跑
+var maxConsecutiveAnswers = function(answerKey, k) {
+    let countT = change(answerKey, k, "T")
+    let countF = change(answerKey, k, "F")
+    return Math.max(countT, countF)
+};
+
+function change(str, k, target){
+    let l =0;
+    for(let i=0; i<str.length; i++){
+        if(str[i] === target) k--;
+        if(k<0){
+            if(str[l] === target) k++
+            l++
+        }
+    }
+    return str.length - l
+}
