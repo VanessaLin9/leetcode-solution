@@ -31,3 +31,28 @@ var characterReplacement = function(s, k) {
 
 // TC: O(n)
 // SC: O(1)
+
+
+// 照樣用比較理解的1004的解法下去改寫的
+var characterReplacement = function(s, k) {
+    const arr = s.split('')
+    const set = new Set(arr)
+    let max =0;
+
+    for(let letter of set){
+        max = Math.max(max, len(letter, k))
+    }
+    return max
+
+    function len(w, count){
+        let l =0;
+        for(let i=0; i<arr.length; i++){
+            if(arr[i] !== w) count --;
+            if(count<0){
+                if(arr[l] !== w)count++;
+                l++
+            }
+        }
+        return arr.length -l
+    }
+};

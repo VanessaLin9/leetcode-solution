@@ -63,5 +63,40 @@ var findShortestSubArray = function(nums) {
 // TC: O(n)
 // MC: O(n)
 
+
+// indexOf + lastIndexOf
+var findShortestSubArray = function(nums) {
+    const hash = {}
+    let max;
+    let count = 0;
+    for(let i=0; i< nums.length; i++){
+        hash[nums[i]] = (hash[nums[i]] || 0) + 1;
+        if(hash[nums[i]] === count){
+            max.push(nums[i])
+        }
+        if(hash[nums[i]]>count){
+            max = [nums[i]]
+            count = hash[nums[i]]
+        }
+    }
+    console.log(hash)
+    console.log(max, count)
+    if(max.length === 1){
+        return len(max[0])
+    } else {
+        let min = Infinity
+        max.forEach(item =>{
+            min = Math.min(min, len(item))
+        })
+        return min
+    }
+    function len(max){
+        let l = nums.indexOf(max)
+        let r = nums.lastIndexOf(max)
+        return r-l +1
+    }
+
+};
+
 console.log(findShortestSubArray([1,5,1,1,6,4])) // 4
 console.log(findShortestSubArray([1,1,2,2,2,1])) // 3
