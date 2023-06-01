@@ -4,7 +4,24 @@
  * @return {number}
  */
 
-// hash map
+// [brute force] -- TLE
+var subarraySum = function(nums, k) {
+    let count = 0;
+    for(let end=0; end<nums.length; end++){
+        let sum =0;
+        for(let start=end; start>=0; start--){
+            sum += nums[start]
+            if(sum === k){
+                count ++
+            }
+        }
+    }
+    return count
+};
+// TC: O(n^2)
+// MC: O(1)
+
+// [hash map]
 var subarraySum = function(nums, k) {
   let map = new Map();
   let sum = 0;
