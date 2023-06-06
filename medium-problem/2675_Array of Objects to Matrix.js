@@ -55,3 +55,45 @@ function jsonToMatrix(arr) {
 
   return matrix; // Return the resulting matrix
 }
+
+// 討論區找了第二個解法
+var jsonToMatrix = function(arr) {
+    function isObj(obj){
+        return obj !== null && typeof obj === 'object'
+    }
+
+    function getkeys(obj) {
+        if(!isObj(obj)) return ['']
+        const result = []
+        for(let key of Object.keys(obj)){
+            const childkeys = getkeys(obj[key])
+            for(let childkey of childkeys){
+                result.push(childkey? `${key}.${childkey}`: key)
+            }
+        }
+        return result
+    }
+
+    function getValue (obj, path){
+        const paths = path.split('.');
+        let i=0;
+        let value = obj;
+        while(i<paths.length && isObj(value)){
+            value = value[paths[i++]]
+        }
+        return i < paths.length || isObj(value) || value === undefined? '': value;
+    }
+
+    const keys = Array.from(new Set(arr.reduce((acc, curr) => {
+        getkeys(curr).forEach(x => acc.add(x))
+        return acc
+    }, new Set()))).sort();
+    console.log(keys)
+
+    const matrix = [keys]
+    arr.forEach(obj => {
+        matrix.push(keys.map(key => getValue(obj, key)))
+    })
+
+    return matrix
+};
