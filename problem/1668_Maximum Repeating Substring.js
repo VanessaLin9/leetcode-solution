@@ -4,17 +4,13 @@
  * @return {number}
  */
 var maxRepeating = function(sequence, word) {
-    let result = 0
     let str = word
-    while(sequence.length>=str.length){
-        if(sequence.includes(str)){
-            str += word
-            result ++
-        } else {
-            return result
-        }
+    let counter = 0
+    while(sequence.includes(str)){
+        counter ++
+        str += word
     }
-    return result
+    return counter
 };
 
 console.log(maxRepeating("ababc", "ab"))
