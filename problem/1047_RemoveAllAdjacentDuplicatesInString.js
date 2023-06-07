@@ -10,16 +10,31 @@
  * @param {string} s
  * @return {string}
  */
+// string concat
 var removeDuplicates = function(s) {
-  let result =[]
+    let r = 0;
+    while(r<s.length){
+        if(s[r] ===s[r-1]){
+            s = s.substring(0, r-1)+s.substring(r+1)
+            r--
+        } else {
+            r++
+        }
+    }
+    return s
+};
+
+// stack
+var removeDuplicates = function(s) {
+  let stack=[]
   for(let i=0; i<s.length; i++){
-    if(s[i] !== result[result.length -1]){
-      result.push(s[i])
+    if(s[i] !== stack[stack.length -1]){
+      stack.push(s[i])
     } else {
-      result.pop()
+      stack.pop()
     }
   }
-  return result.join('')
+  return stack.join('')
 };
 
 console.log(removeDuplicates("aaaaaaaa"))
