@@ -3,6 +3,8 @@
  * @param {number} colsCount
  * @return {Array<Array<number>>}
  */
+
+// 討論區參考
 Array.prototype.snail = function(rowsCount, colsCount) {
     if(this.length !==  rowsCount * colsCount) return [];
     let result = Array(rowsCount).fill([]).map(() => []);
@@ -15,6 +17,28 @@ Array.prototype.snail = function(rowsCount, colsCount) {
         }
     }
     return result;
+}
+
+// 自己寫的
+Array.prototype.snail = function(rowsCount, colsCount) {
+    if(this.length !== rowsCount*colsCount) return []
+    const ans = new Array(rowsCount).fill([]).map(()=> [])
+    let p =0;
+    for(let col=0; col<colsCount; col++){
+        if(col%2 === 0){
+            for(let row=0; row<rowsCount; row++){
+                ans[row][col] = this[p]
+                p++
+            }
+        } else {
+            for(let row=rowsCount-1; row >=0; row--){
+                ans[row][col] = this[p]
+                p++
+            }
+        }
+    }
+
+    return ans
 }
 
 /**
