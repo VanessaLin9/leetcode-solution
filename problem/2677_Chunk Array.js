@@ -20,6 +20,13 @@ var chunk = function(arr, size) {
     }
     return result
 };
+//自己改寫recursion
+var chunk = function(arr, size) {
+    if(arr.length === 0) return []
+    if(arr.length <= size) return [arr]
+    return [arr.splice(0, size)].concat([...chunk(arr, size)])
+};
+
 
 //  可以少用一個Pointer 縮寫一下
 var chunk = function(arr, size) {
