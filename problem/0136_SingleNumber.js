@@ -10,21 +10,32 @@
 
 // brute force
 
-// var singleNumber = function(nums) {
-//   const hash ={}
-//   for(let i in nums){
-//     if(hash[nums[i]] === undefined) {
-//       hash[nums[i]] = 0
-//     }
-//     hash[nums[i]] += 1
-//   }
-//   console.log(hash)
-//   for (let j in hash) {
-//     if(hash[j] === 1){
-//       return j
-//     }
-//   }
-// };
+var singleNumber = function(nums) {
+  const hash ={}
+  for(let i in nums){
+    if(hash[nums[i]] === undefined) {
+      hash[nums[i]] = 0
+    }
+    hash[nums[i]] += 1
+  }
+  console.log(hash)
+  for (let j in hash) {
+    if(hash[j] === 1){
+      return j
+    }
+  }
+};
+// time O(n)
+// space O(n)
+
+var singleNumber = function(nums) {
+  const set = new Set();
+  for(let i=0; i<nums.length; i++){
+    if(set.has(nums[i])) set.delete(nums[i])
+    else set.add(nums[i])
+  }
+  return [...set].pop()
+}
 // time O(n)
 // space O(n)
 
