@@ -1,3 +1,29 @@
+// brute force
+public class Solution
+{
+    public bool IsHappy(int n)
+    {
+        HashSet<int> hash = new HashSet<int>();
+        while (n != 1 && !hash.Contains(n))
+        {
+            hash.Add(n);
+            int sum = 0;
+            while (n > 0)
+            {
+                int digit = n % 10;
+                sum += digit * digit;
+                n /= 10;
+            }
+            n = sum;
+        }
+        return n == 1;
+    }
+}
+// Time complexity: O(n)
+// Space complexity: O(n)
+
+
+// LINQ Select
 public class Solution {
     public bool IsHappy(int n) {
         int sum = 0;
@@ -22,3 +48,5 @@ public class Solution {
         return false;
     }
 }
+// Time complexity: O(n)
+// Space complexity: O(n)
