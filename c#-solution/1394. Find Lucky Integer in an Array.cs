@@ -23,3 +23,27 @@ public class Solution
     return ans;
   }
 }
+
+//Dictionary solution
+public class Solution
+{
+  public int FindLucky(int[] arr)
+  { 
+    var dict = new Dictionary<int, int>();
+    foreach (int n in arr)
+    {
+      dict[n] = dict.GetValueOrDefault(n, 0) + 1;
+    }
+
+    var list = dict.Where(c => c.Key == c.Value);
+      
+      if(list.Count() == 0)
+      {
+        return -1;
+      }
+      else
+      {
+        return list.Select(s => s.Key).OrderByDescending(s => s).First();
+      }
+  }
+}
