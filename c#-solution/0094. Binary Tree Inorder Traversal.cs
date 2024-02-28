@@ -34,3 +34,16 @@ public class Solution
     return ans;
   }
 }
+
+// not clear solution
+public class Solution {
+  List<int> resultList = new List<int>();
+  public IList<int> InorderTraversal(TreeNode root) {
+    if(root == null) return new List<int>();
+
+    InorderTraversal(root.left);
+    resultList.Add(root.val);
+    InorderTraversal(root.right);
+    return resultList;
+  }
+}
