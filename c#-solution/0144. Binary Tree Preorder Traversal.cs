@@ -36,3 +36,22 @@ public class Solution
     return ans;
   }
 }
+
+// recursive solution
+public class Solution {
+  public IList<int> PreorderTraversal(TreeNode root) {
+    var result = new List<int>();
+    if(root == null){
+      return result;
+    }
+    Preorder(root, result);
+    return result;
+  }
+
+  public void Preorder(TreeNode node, List<int> result){
+    if(node == null)return;
+    result.Add(node.val);
+    Preorder(node.left, result);
+    Preorder(node.right, result);
+  }
+}
