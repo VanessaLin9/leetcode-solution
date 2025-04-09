@@ -1,3 +1,7 @@
+// 0026. Remove Duplicates from Sorted Array
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+// Tag: C#, Array, Two Pointers, Easy
+
 // two pointers
 public class Solution
 {

@@ -1,3 +1,7 @@
+// 0704. Binary Search
+// https://leetcode.com/problems/binary-search/
+// Tag: C#, Array, Binary Search, Easy
+
 public class Solution {
     public int Search(int[] nums, int target) {
         int min = 0;

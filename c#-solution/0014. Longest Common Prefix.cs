@@ -1,3 +1,7 @@
+// 0014. Longest Common Prefix
+// https://leetcode.com/problems/longest-common-prefix/
+// Tag: C#, String, Array, Easy
+
 // burst force
 public class Solution
 {

@@ -1,4 +1,7 @@
-namespace DefaultNamespace;
+// 448. Find All Numbers Disappeared in an Array
+// https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
+// Tag: C#, Array, Hash Table, Easy
+
 // Counting sort solution
 public class Solution {
     public IList<int> FindDisappearedNumbers(int[] nums) {
@@ -69,5 +72,5 @@ public class Solution {
         return ans;
     }
 }
-// time complexity: O(nlogn)
+// time complexity: O(n log n)
 // space complexity: O(n)

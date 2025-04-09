@@ -1,4 +1,6 @@
-namespace DefaultNamespace;
+// 191. Number of 1 Bits
+// https://leetcode.com/problems/number-of-1-bits/
+// Tag: C#, Bit Manipulation, Easy
 
 // string convert solution
 public class Solution {

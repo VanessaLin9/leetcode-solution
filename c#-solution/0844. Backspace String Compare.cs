@@ -1,4 +1,6 @@
-namespace DefaultNamespace;
+// 084. Backspace String Compare
+// https://leetcode.com/problems/backspace-string-compare/
+// Tag: C#, Stack, String, Easy
 
 public class Solution {
     public bool BackspaceCompare(string s, string t) {

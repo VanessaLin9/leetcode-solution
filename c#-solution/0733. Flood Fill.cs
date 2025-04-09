@@ -1,5 +1,6 @@
-namespace DefaultNamespace;
-
+// 733. Flood Fill
+// https://leetcode.com/problems/flood-fill/description/
+// Tag: C#, Array, Depth-First Search, Breadth-First Search, Matrix, Easy, DFS
 public class Solution {
     public int[][] FloodFill(int[][] image, int sr, int sc, int color) {
         var origin = image[sr][sc];

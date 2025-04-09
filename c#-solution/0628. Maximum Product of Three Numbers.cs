@@ -1,3 +1,7 @@
+// 0628. Maximum Product of Three Numbers
+// https://leetcode.com/problems/maximum-product-of-three-numbers/
+// Tag: C#, Array, Math, Sorting, Easy
+
 public class Solution {
     public int MaximumProduct(int[] nums) {
         Array.Sort(nums);

@@ -1,4 +1,6 @@
-namespace DefaultNamespace;
+// 0594. Longest Harmonious Subsequence
+// https://leetcode.com/problems/longest-harmonious-subsequence/
+// Tag: C#, Hash Table, Array, Easy
 
 public class Solution {
     public int FindLHS(int[] nums)

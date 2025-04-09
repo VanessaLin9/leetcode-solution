@@ -1,3 +1,7 @@
+// 0009. Palindrome Number
+// https://leetcode.com/problems/palindrome-number/
+// Tag: C#, Math, String, Easy
+
 public class Solution {
     public bool IsPalindrome(int x) {
         var i = x.ToString().ToCharArray();

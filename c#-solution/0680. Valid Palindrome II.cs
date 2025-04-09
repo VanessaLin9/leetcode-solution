@@ -1,4 +1,7 @@
-namespace DefaultNamespace;
+// 0680. Valid Palindrome II
+// https://leetcode.com/problems/valid-palindrome-ii/
+// Tag: C#, String, Two Pointers, Recursion, Easy
+
 public class Solution {
     public bool ValidPalindrome(string s) {
         int start = 0;

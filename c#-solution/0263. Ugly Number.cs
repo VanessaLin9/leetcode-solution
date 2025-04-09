@@ -1,3 +1,7 @@
+// 263. Ugly Number
+// https://leetcode.com/problems/ugly-number/
+// Tag: C#, Math, Easy
+
 // brute force
 public class Solution
 {

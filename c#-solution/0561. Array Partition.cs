@@ -1,3 +1,7 @@
+// 0561. Array Partition I
+// https://leetcode.com/problems/array-partition-i/
+// Tag: C#, Array, Sorting, Easy
+
 public class Solution
 {
   public int ArrayPairSum(int[] nums)

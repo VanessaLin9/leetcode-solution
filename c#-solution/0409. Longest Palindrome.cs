@@ -1,3 +1,7 @@
+// 0409. Longest Palindrome
+// https://leetcode.com/problems/longest-palindrome/
+// Tag: C#, Hash Table, String, Easy
+
 public class Solution
 {
   public int LongestPalindrome(string s)

@@ -1,4 +1,6 @@
-namespace DefaultNamespace;
+// 1047. Remove All Adjacent Duplicates In String
+// https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
+// Tag: C#, Stack, String, Easy
 
 public class Solution {
     public string RemoveDuplicates(string s)

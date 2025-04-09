@@ -1,3 +1,8 @@
+// 1394. Find Lucky Integer in an Array
+// https://leetcode.com/problems/find-lucky-integer-in-an-array/
+// Tag: C#, Array, Hash Table, Easy
+
+// 1. HashMap solution
 public class Solution
 {
   public int FindLucky(int[] arr)

@@ -1,4 +1,7 @@
-namespace DefaultNamespace;
+// 0643. Maximum Average Subarray I
+// https://leetcode.com/problems/maximum-average-subarray-i/
+// Tag: C#, Array, Sliding Window, Easy
+
 public class Solution {
     public double FindMaxAverage(int[] nums, int k) {
         double sum = 0;

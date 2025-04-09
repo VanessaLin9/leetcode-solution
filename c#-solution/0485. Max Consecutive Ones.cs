@@ -1,4 +1,6 @@
-namespace DefaultNamespace;
+// 485. Max Consecutive Ones
+// https://leetcode.com/problems/max-consecutive-ones/
+// Tag: C#, Array, Binary Search, Easy
 
 public class Solution {
     public int FindMaxConsecutiveOnes(int[] nums) {

@@ -1,4 +1,6 @@
-namespace DefaultNamespace;
+// 0231. Power of Two
+// https://leetcode.com/problems/power-of-two/description/
+// Tag: C#, Math, Bit Manipulation, Easy
 
 public class Solution {
     public bool IsPowerOfTwo(int n) {

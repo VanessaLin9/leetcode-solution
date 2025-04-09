@@ -1,3 +1,7 @@
+// 0020. Valid Parentheses
+// https://leetcode.com/problems/valid-parentheses/
+// Tag: C#, Stack, String, Easy
+
 public class Solution {
     public bool IsValid(string s) {
         var map = new Dictionary<char, char>{

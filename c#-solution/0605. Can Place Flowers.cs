@@ -1,3 +1,7 @@
+// 605. Can Place Flowers
+// https://leetcode.com/problems/can-place-flowers/description/
+// Tag: C#, Array, Easy
+
 public class Solution {
     public bool CanPlaceFlowers(int[] flowerbed, int n) {
         int t = 0;

@@ -1,3 +1,8 @@
+// 0965. Univalued Binary Tree
+// https://leetcode.com/problems/univalued-binary-tree/
+// Tag: C#, Tree, Depth-first Search, Binary Tree, Easy, DFS
+// Related: 100. Same Tree, 101. Symmetric Tree, 226. Invert Binary Tree
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {

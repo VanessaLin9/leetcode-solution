@@ -1,3 +1,7 @@
+// 0202. Happy Number
+// https://leetcode.com/problems/happy-number/
+// Tag: C#, Hash Table, Math, Easy
+
 // brute force
 public class Solution
 {

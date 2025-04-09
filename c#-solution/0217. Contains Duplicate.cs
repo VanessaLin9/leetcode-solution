@@ -1,3 +1,7 @@
+// 0217. Contains Duplicate
+// https://leetcode.com/problems/contains-duplicate/
+// Tag: C#, Array, Hash Table, Easy
+
 public class Solution
 {
   public bool ContainsDuplicate(int[] nums)

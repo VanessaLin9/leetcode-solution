@@ -1,3 +1,7 @@
+// 136. Single Number
+// https://leetcode.com/problems/single-number/
+// Tag: C#, Array, Bit Manipulation, Easy
+
 // bitwise
 public class Solution {
     public int SingleNumber(int[] nums) {

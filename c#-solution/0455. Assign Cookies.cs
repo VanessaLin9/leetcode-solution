@@ -1,3 +1,7 @@
+// 0455. Assign Cookies
+// https://leetcode.com/problems/assign-cookies/
+// Tag: C#, Array, Greedy, Sorting, Easy
+
 public class Solution {
     public int FindContentChildren(int[] g, int[] s) {
         Array.Sort(g);

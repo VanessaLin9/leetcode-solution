@@ -1,4 +1,6 @@
-namespace DefaultNamespace;
+// 242. Valid Anagram
+// https://leetcode.com/problems/valid-anagram/
+// Tag: C#, Hash Table, String, Sorting, Easy
 
 // sort solution
 public class Solution {

@@ -1,4 +1,7 @@
-namespace DefaultNamespace;
+// 905. Sort Array By Parity
+// https://leetcode.com/problems/sort-array-by-parity/
+// Tag: C#, Array, Two Pointers, Sorting, Easy
+
 // two pointer approach
 public class Solution {
     public int[] SortArrayByParity(int[] nums) {

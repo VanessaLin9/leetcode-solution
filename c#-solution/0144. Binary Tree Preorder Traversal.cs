@@ -1,3 +1,8 @@
+// 0144. Binary Tree Preorder Traversal
+// https://leetcode.com/problems/binary-tree-preorder-traversal/
+// Tag: C#, Stack, Tree, Depth-first Search, Binary Tree, Easy
+// Related: 94. Binary Tree Inorder Traversal, 145. Binary Tree Postorder Traversal
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
