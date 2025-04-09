@@ -8,3 +8,16 @@ public class Solution {
         return min == k ?result -1:result;
     }
 }
+// TC: O(n log n);
+// SC: O(n);
+
+// Linq + distinct solution 
+public class Solution {
+    public int MinOperations(int[] nums, int k) {
+        if(nums.Any(x => x<k)) return -1;
+        var result = nums.Where(x => x > k).Distinct().Count();
+        return result;
+    }
+}
+// TC: O(n);
+// SC: O(n);
