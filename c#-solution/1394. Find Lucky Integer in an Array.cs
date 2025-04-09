@@ -62,3 +62,15 @@ public class Solution {
             .Max();
   }
 }
+
+//LINQ solution group by
+public class Solution {
+    public int FindLucky(int[] arr) {
+        var lucky = arr.GroupBy(x => x)
+                        .Where(g => g.Key == g.Count())
+                        .Select(k => k.Key)
+                        .DefaultIfEmpty(-1)
+                        .Max();
+        return lucky;
+    }
+}
