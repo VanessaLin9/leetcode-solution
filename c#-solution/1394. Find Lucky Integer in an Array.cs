@@ -47,3 +47,18 @@ public class Solution
       }
   }
 }
+
+//LINQ solution and Dictionary
+public class Solution {
+  public int FindLucky(int[] arr) {
+    var list = new Dictionary<int, int>();
+    foreach(int i in arr){
+        list[i] = list.GetValueOrDefault(i, 0) + 1;
+    }
+    return list
+            .Where(x => x.Key == x.Value)
+            .Select(x => x.Key)
+            .DefaultIfEmpty(-1)
+            .Max();
+  }
+}
