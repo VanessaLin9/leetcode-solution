@@ -1,3 +1,7 @@
+// 3375. Minimum Operations to Make Array Values Equal to K
+// https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/description/
+// Tag: C#, Array, LINQ, Easy
+
 // Naive solution
 public class Solution {
     public int MinOperations(int[] nums, int k) {
