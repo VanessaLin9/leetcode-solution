@@ -1,3 +1,7 @@
+// 13. Roman to Integer
+//https://leetcode.com/problems/roman-to-integer/
+// Tags: Hash Table, Math, String, Easy
+
 // Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 /**
  * @param {string} s
