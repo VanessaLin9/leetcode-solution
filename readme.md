@@ -21,13 +21,13 @@
   - Hash Table: 18%
 
 - JavaScript (.js): total 213
-  - Easy: 0%
-  - Array: 0%
-  - String: 0%
-  - Math: 0%
+  - Easy: 5%
+  - Array: 2%
+  - String: 2%
+  - Math: 2%
   - Dynamic Programming: 0%
   - Linked List: 0%
-  - Hash Table: 0%
+  - Hash Table: 1%
 
 <!-- summary:end -->
 
