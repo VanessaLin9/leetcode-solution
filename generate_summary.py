@@ -60,7 +60,7 @@ if __name__ == "__main__":
 
     # 準備 summary markdown 文字（要寫進 README）
     lines = []
-    lines.append("## 📊 Tag Summary\n")
+    lines.append("### 📊 Tag Summary\n")
 
     for ext in extensions:
         lang = "C#" if ext == ".cs" else "JavaScript"
