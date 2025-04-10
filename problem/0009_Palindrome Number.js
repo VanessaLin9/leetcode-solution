@@ -1,6 +1,6 @@
 // 0009. Palindrome Number
 // https://leetcode.com/problems/palindrome-number/
-// Tags: Math, String, Easy
+// Tag: Math, String, Easy
 
 
 // Given an integer x, return true if x is a palindrome, and false otherwise.

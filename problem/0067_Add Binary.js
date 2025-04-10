@@ -1,3 +1,7 @@
+// 0067. Add Binary
+// https://leetcode.com/problems/add-binary/
+// Tag: String, Math, Easy
+
 // Given two binary strings a and b, return their sum as a binary string.
 
 /**

@@ -1,3 +1,7 @@
+// 0066. Plus One
+// https://leetcode.com/problems/plus-one/
+// Tag: Array, Math, Easy
+
 /**
  * @param {number[]} digits
  * @return {number[]}
