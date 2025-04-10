@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# VSCode or JetBrains IDE settings
+# .vscode/
+# .idea/
+
+# macOS 系統檔
+.DS_Store
+
+# logs 或暫存
+*.log
+temp/
