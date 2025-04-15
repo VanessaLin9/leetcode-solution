@@ -11,24 +11,10 @@
 <!-- summary:start -->
 ### 📊 Tag Summary
 
-- C# (.cs): total 45
-  - Easy: 100%
-  - Array: 60%
-  - String: 20%
-  - Math: 13%
-  - Dynamic Programming: 9%
-  - Linked List: 2%
-  - Hash Table: 18%
-
-- JavaScript (.js): total 213
-  - Easy: 7%
-  - Array: 3%
-  - String: 2%
-  - Math: 2%
-  - Dynamic Programming: 0%
-  - Linked List: 0%
-  - Hash Table: 1%
-
+| Language | Total | Easy | Array | String | Math | Dynamic Programming | Linked List | Hash Table |
+|---|---|---|---|---|---|---|---|---|
+| C# | 45 | 100% | 60% | 20% | 13% | 9% | 2% | 18% |
+| JavaScript | 213 | 7% | 3% | 2% | 2% | 0% | 0% | 1% |
 <!-- summary:end -->
 
 ### 🧠 
