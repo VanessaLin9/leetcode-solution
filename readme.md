@@ -21,8 +21,8 @@
   - Hash Table: 18%
 
 - JavaScript (.js): total 213
-  - Easy: 5%
-  - Array: 2%
+  - Easy: 7%
+  - Array: 3%
   - String: 2%
   - Math: 2%
   - Dynamic Programming: 0%
