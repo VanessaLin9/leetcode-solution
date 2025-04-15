@@ -62,19 +62,27 @@ if __name__ == "__main__":
     lines = []
     lines.append("### 📊 Tag Summary\n")
 
+    # 表頭
+    headers = ["Language", "Total"] + observed_tags
+    lines.append("| " + " | ".join(headers) + " |")
+    lines.append("|" + "|".join(["---"] * len(headers)) + "|")
+
+    # 每一語言一列
     for ext in extensions:
         lang = "C#" if ext == ".cs" else "JavaScript"
         total = counts[ext]
-        lines.append(f"- {lang} ({ext}): total {total}")
+        row = [f"{lang}", str(total)]
 
         for tag in observed_tags:
             tag_count = tag_counts[ext].get(tag, 0)
             ratio = (tag_count / total) * 100 if total > 0 else 0
-            lines.append(f"  - {tag}: {ratio:.0f}%")
-        lines.append("")  # 加一個空行
+            row.append(f"{ratio:.0f}%")
+
+        lines.append("| " + " | ".join(row) + " |")
 
     summary_text = "\n".join(lines)
     update_readme_with_summary(README_PATH, summary_text)
+
 
     print("✅ README summary updated.")
 
