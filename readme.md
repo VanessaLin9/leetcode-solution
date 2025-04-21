@@ -13,7 +13,7 @@
 
 | Language | Total | Easy | Array | String | Math | Dynamic Programming | Linked List | Hash Table |
 |---|---|---|---|---|---|---|---|---|
-| C# | 50 | 100% | 62% | 20% | 12% | 8% | 2% | 20% |
+| C# | 51 | 100% | 63% | 20% | 12% | 8% | 2% | 20% |
 | JavaScript | 214 | 7% | 3% | 2% | 2% | 0% | 0% | 1% |
 <!-- summary:end -->
 
