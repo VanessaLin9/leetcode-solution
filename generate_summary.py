@@ -48,10 +48,15 @@ def update_readme_with_summary(readme_path, summary_md):
 
 
 if __name__ == "__main__":
-    extensions = [".cs", ".js"]
+    extensions = [".cs", ".js", ".sql"]
 
     # ===== Custom focus tags =====
-    observed_tags = ["Easy", "Array", "String", "Math", "Dynamic Programming", "Linked List", "Hash Table"]
+    share_tags = ["Easy", "Array", "String", "Math", "Dynamic Programming", "Linked List", "Hash Table"] # 這些 tag 是在所有語言中都會出現的
+    observed_tags_by_lang = {
+        ".cs": share_tags,
+        ".js": share_tags,
+        ".sql": ["SELECT", "JOIN", "AGGREGATION", "SUBQUERY", "UNION", "SORTING"],
+    }
 
 
     # 標籤統計（分語言）
@@ -62,24 +67,41 @@ if __name__ == "__main__":
     lines = []
     lines.append("### 📊 Tag Summary\n")
 
-    # 表頭
-    headers = ["Language", "Total"] + observed_tags
+    # 上表：非 SQL 語言
+    lines.append("#### 🟦 C#/JS 題型分布\n")
+    headers = ["Language", "Total"] + observed_tags_by_lang[".cs"]
     lines.append("| " + " | ".join(headers) + " |")
     lines.append("|" + "|".join(["---"] * len(headers)) + "|")
 
-    # 每一語言一列
-    for ext in extensions:
+    for ext in [".cs", ".js"]:
         lang = "C#" if ext == ".cs" else "JavaScript"
         total = counts[ext]
         row = [f"{lang}", str(total)]
-
-        for tag in observed_tags:
+        for tag in observed_tags_by_lang[ext]:
             tag_count = tag_counts[ext].get(tag, 0)
             ratio = (tag_count / total) * 100 if total > 0 else 0
             row.append(f"{ratio:.0f}%")
-
         lines.append("| " + " | ".join(row) + " |")
 
+    lines.append("")  # 空一行
+
+    # 下表：SQL
+    lines.append("#### 🟨 SQL 題型分布\n")
+    headers = ["Language", "Total"] + observed_tags_by_lang[".sql"]
+    lines.append("| " + " | ".join(headers) + " |")
+    lines.append("|" + "|".join(["---"] * len(headers)) + "|")
+
+    ext = ".sql"
+    lang = "SQL"
+    total = counts[ext]
+    row = [f"{lang}", str(total)]
+    for tag in observed_tags_by_lang[ext]:
+        tag_count = tag_counts[ext].get(tag, 0)
+        ratio = (tag_count / total) * 100 if total > 0 else 0
+        row.append(f"{ratio:.0f}%")
+    lines.append("| " + " | ".join(row) + " |")
+
+    # 寫入 README
     summary_text = "\n".join(lines)
     update_readme_with_summary(README_PATH, summary_text)
 

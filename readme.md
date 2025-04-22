@@ -11,10 +11,18 @@
 <!-- summary:start -->
 ### 📊 Tag Summary
 
+#### 🟦 C#/JS 題型分布
+
 | Language | Total | Easy | Array | String | Math | Dynamic Programming | Linked List | Hash Table |
 |---|---|---|---|---|---|---|---|---|
 | C# | 52 | 100% | 62% | 21% | 12% | 8% | 2% | 19% |
 | JavaScript | 214 | 7% | 3% | 2% | 2% | 0% | 0% | 1% |
+
+#### 🟨 SQL 題型分布
+
+| Language | Total | SELECT | JOIN | AGGREGATION | SUBQUERY | UNION | SORTING |
+|---|---|---|---|---|---|---|---|
+| SQL | 1 | 100% | 0% | 0% | 0% | 0% | 0% |
 <!-- summary:end -->
 
 ### 🧠 
