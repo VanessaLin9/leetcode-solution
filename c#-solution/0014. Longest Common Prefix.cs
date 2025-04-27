@@ -66,3 +66,29 @@ public class Solution
     return pre;
   }
 }
+
+// list
+public class Solution {
+    public string LongestCommonPrefix(string[] strs) {
+        var pre = new List<char>();
+        for(int i=0; i<strs[0].Length; i++){
+            var curr = strs[0][i];
+            var flag = true;
+            for(int j=0; j<strs.Length; j++){
+                if( i >= strs[j].Length || strs[j][i] != curr) {
+                    flag = false;
+                    break;
+                }
+            }
+            if(flag == true){
+                pre.Add(curr);
+            } else {
+                break;
+            }
+        }
+        return string.Concat(pre);
+        // return new string(pre.ToArray());
+    }
+}
+// TC: O(mn)
+// SC: O(1)
