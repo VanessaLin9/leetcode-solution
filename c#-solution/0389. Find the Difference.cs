@@ -73,3 +73,19 @@ public class Solution {
         return ' ';
     }
 }
+
+// Array
+public class Solution {
+    public char FindTheDifference(string s, string t) {
+        var map = new int [26];
+        for(int i =0; i<s.Length; i++){
+            map[s[i] - 'a'] ++;
+            map[t[i] - 'a'] --;
+        }
+        map[t[t.Length -1] - 'a'] --;
+        for(int n =0; n<26 ; n++){
+            if(map[n] == -1) return (char)('a' + n); 
+        }
+        return ' ';
+    }
+}
