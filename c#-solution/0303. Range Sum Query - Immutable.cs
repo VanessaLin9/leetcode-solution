@@ -26,7 +26,7 @@ public class NumArray {
 // 2. Prefix Sum
 public class NumArray {
 
-    new int [] pre;
+    private int [] pre;
 
     public NumArray(int[] nums) { 
         pre = new int [nums.Length];
