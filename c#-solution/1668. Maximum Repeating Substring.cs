@@ -15,3 +15,16 @@ public class Solution {
         return repeat;
     }
 }
+
+// same logic but using StringBuilder
+public class Solution {
+    public int MaxRepeating(string sequence, string word) {
+        var result = 0;
+        var str = new StringBuilder(word);
+        while(sequence.Contains(str.ToString())){
+            result ++;
+            str.Append(word);
+        }
+        return result;
+    }
+}
