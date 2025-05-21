@@ -13,10 +13,10 @@
 
 #### 🟦 C#/JS 題型分布
 
-| Language | Total | Easy | Array | String | Math | Dynamic Programming | Linked List | Hash Table |
-|---|---|---|---|---|---|---|---|---|
-| C# | 67 | 99% | 58% | 25% | 13% | 6% | 3% | 19% |
-| JavaScript | 214 | 7% | 4% | 2% | 2% | 0% | 0% | 1% |
+| Language | Total | Easy | Medium | Array | String | Math | Dynamic Programming | Linked List | Hash Table |
+|---|---|---|---|---|---|---|---|---|---|
+| C# | 67 | 99% | 1% | 58% | 25% | 13% | 6% | 3% | 19% |
+| JavaScript | 214 | 7% | 0% | 4% | 2% | 2% | 0% | 0% | 1% |
 
 #### 🟨 SQL 題型分布
 
