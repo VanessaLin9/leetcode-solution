@@ -1,3 +1,7 @@
+// 424. Longest Repeating Character Replacement
+// https://leetcode.com/problems/longest-repeating-character-replacement/
+// Tag: Hash Table, String, Sliding Window, Medium
+
 /**
  * @param {string} s
  * @param {number} k

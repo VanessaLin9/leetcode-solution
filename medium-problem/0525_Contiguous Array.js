@@ -1,6 +1,6 @@
 // 0525. Contiguous Array
 // https://leetcode.com/problems/contiguous-array/
-// Tag: Array, Hash Table, Prefix Sum
+// Tag: Array, Hash Table, Prefix Sum, Medium
 
 /**
  * @param {number[]} nums

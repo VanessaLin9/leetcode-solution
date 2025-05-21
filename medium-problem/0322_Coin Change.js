@@ -1,3 +1,7 @@
+// 322. Coin Change
+// https://leetcode.com/problems/coin-change/
+// Tag: Array, Dynamic Programming, Breadth-first Search, Medium
+
 /**
  * @param {number[]} coins
  * @param {number} amount

@@ -1,3 +1,7 @@
+// 416. Partition Equal Subset Sum
+// https://leetcode.com/problems/partition-equal-subset-sum/
+// Tag: Array, Dynamic Programming, Medium
+
 /**
  * @param {number[]} nums
  * @return {boolean}

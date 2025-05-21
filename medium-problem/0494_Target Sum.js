@@ -1,3 +1,7 @@
+// 494. Target Sum
+// https://leetcode.com/problems/target-sum/
+// Tag: Array, Dynamic Programming, Backtracking, Medium
+
 /**
  * @param {number[]} nums
  * @param {number} target
