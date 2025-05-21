@@ -51,7 +51,7 @@ if __name__ == "__main__":
     extensions = [".cs", ".js", ".sql"]
 
     # ===== Custom focus tags =====
-    share_tags = ["Easy", "Array", "String", "Math", "Dynamic Programming", "Linked List", "Hash Table"] # 這些 tag 是在所有語言中都會出現的
+    share_tags = ["Easy","Medium", "Array", "String", "Math", "Dynamic Programming", "Linked List", "Hash Table"] # 這些 tag 是在所有語言中都會出現的
     observed_tags_by_lang = {
         ".cs": share_tags,
         ".js": share_tags,
