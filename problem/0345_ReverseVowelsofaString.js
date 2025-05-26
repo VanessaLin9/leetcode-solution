@@ -1,5 +1,6 @@
 // 0345_ReverseVowelsofaString
 // https://leetcode.com/problems/reverse-vowels-of-a-string/
+// Tag: String, Two Pointers, Easy
 
 //  Given a string s, reverse only all the vowels in the string and return it.
 

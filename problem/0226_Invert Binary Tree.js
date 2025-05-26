@@ -1,3 +1,7 @@
+// 226. Invert Binary Tree
+// https://leetcode.com/problems/invert-binary-tree/
+// Tag: Tree, Depth-first Search, Breadth-first Search, Binary Tree, Easy
+
 // Given the root of a binary tree, invert the tree, and return its root.
 /**
  * Definition for a binary tree node.
