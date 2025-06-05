@@ -1,3 +1,8 @@
+// 788. Rotated Digits
+// https://leetcode.com/problems/rotated-digits/
+// Tag: Math, String, Brainteaser, Medium
+
+
 // An integer x is a good if after rotating each digit individually by 180 degrees, we get a valid number that is different from x. Each digit must be rotated - we cannot choose to leave it alone.
 
 // A number is valid if each digit remains a digit after rotation. For example:
@@ -34,5 +39,31 @@ function isvalidate(i){
 }
 // TC: n log n
 // MC: 1
+
+var rotatedDigits = function(n) {
+    const diff = new Set(['2', '5', '6', '9']);
+    const invalid = new Set(['3', '4', '7']);
+
+    let result = 0;
+    for(let i=0; i<=n; i++){
+        let str = i + "";
+        let arr = str.split('');
+        let hasdiff = false;
+        let isValid = true;
+        for(let c of arr){
+            if(diff.has(c)){
+                hasdiff = true;
+            } else if (invalid.has(c)){
+                isValid = false;
+                break;
+            }
+        }
+        if(hasdiff && isValid){
+            result ++;
+        }
+    }
+    return result;
+
+};
 
 console.log(rotatedDigits(857)) //247
