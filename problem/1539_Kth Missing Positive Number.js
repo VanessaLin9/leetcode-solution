@@ -1,3 +1,8 @@
+// 1539. Kth Missing Positive Number
+// https://leetcode.com/problems/kth-missing-positive-number/
+// Tag: Array, Binary Search, Hash Table, Two Pointers, Easy
+
+
 // Given an array arr of positive integers sorted in a strictly increasing order, and an integer k.
 // Return the kth positive integer that is missing from this array.
 /**
@@ -5,11 +10,7 @@
  * @param {number} k
  * @return {number}
  */
-/**
- * @param {number[]} arr
- * @param {number} k
- * @return {number}
- */
+
 
 // set
 var findKthPositive = function(arr, k) {
@@ -83,6 +84,19 @@ var findKthPositive = function(arr, k) {
 
 // TC: O(log n)
 // MC: O(1)
+
+var findKthPositive = function(arr, k) {
+    let p = 0;
+    const miss = [];
+    for(let i=1; miss.length < k; i++){
+        if(p<arr.length && arr[p] === i){
+            p++
+        } else {
+            miss.push(i);
+        }
+    }
+    return miss[k-1];
+};
 
 
 console.log(findKthPositive([2,3,4,7,11], 5)) //9
