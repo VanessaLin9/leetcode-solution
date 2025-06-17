@@ -15,7 +15,7 @@
 
 | Language | Total | Easy | Medium | Array | String | Math | Dynamic Programming | Linked List | Hash Table |
 |---|---|---|---|---|---|---|---|---|---|
-| C# | 72 | 94% | 4% | 58% | 25% | 14% | 6% | 3% | 19% |
+| C# | 73 | 95% | 4% | 59% | 25% | 14% | 5% | 3% | 21% |
 | JavaScript | 222 | 17% | 4% | 9% | 7% | 5% | 2% | 1% | 5% |
 
 #### 🟨 SQL 題型分布
