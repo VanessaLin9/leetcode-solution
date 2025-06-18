@@ -32,3 +32,15 @@ public class Solution
 
 // TC: O(n)
 // MC: O(n)
+
+// LINQ same as foreach logic
+// but less efficient
+public class Solution
+{
+  public int SingleNumber(int[] nums)
+  {
+    return nums.Aggregate(0, (acc, cur) => acc ^ cur);
+  }
+}
+// TC: O(n)
+// MC: O(1)
