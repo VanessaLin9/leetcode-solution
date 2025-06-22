@@ -1,3 +1,7 @@
+// 49. Group Anagrams
+// https://leetcode.com/problems/group-anagrams/
+// Tag: Array, Hash Table, String, Sorting, Medium
+
 /**
  * @param {string[]} strs
  * @return {string[][]}
