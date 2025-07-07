@@ -7,6 +7,26 @@
  * @return {number}
  */
 
+// Brute Force (could not pass will TLE)
+var findMaxLength = function(nums) {
+    let result = 0;
+    
+    for(let i=0; i<nums.length -1; i++){
+        let sum = 0;
+        for(let j=i; j<nums.length; j++){
+            nums[j] == 0? sum -- : sum ++;
+            if(sum == 0){
+                let leng = j - i + 1;
+                result = Math.max(result, leng);
+            }
+        }
+    }
+    return result;
+};
+// TC: O(n^2)
+// MC: O(1)
+
+
 // hash + prefix
 var findMaxLength = function(nums) {
     const  hash = {} //紀錄前綴和:出現的位置
