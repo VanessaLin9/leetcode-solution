@@ -1,3 +1,8 @@
+// 2215. Find the Difference of Two Arrays
+// https://leetcode.com/problems/find-the-difference-of-two-arrays/
+// Tag: Array, Hash Table, Easy
+
+
 /**
  * @param {number[]} nums1
  * @param {number[]} nums2
